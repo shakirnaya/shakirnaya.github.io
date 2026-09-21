@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="黄瓜炭疽病防治指南：详细解析症状识别、发病规律、科学用药方案及预防措施，帮助种植户有效控制病害，保障黄瓜产量与品质。">
+    <meta name="keywords" content="黄瓜炭疽病,黄瓜病害,农业技术,蔬菜种植,炭疽病防治">
+    <title>黄瓜炭疽病-黄瓜炭疽病识别与科学防治全攻略</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-green: #2d6a4f;
+            --light-green: #d8f3dc;
+            --accent-orange: #e76f51;
+            --text-dark: #1b4332;
+            --text-gray: #4a4a4a;
+            --bg-body: #f7f9f7;
+            --bg-white: #ffffff;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0,0,0,0.05);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-body);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--bg-white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-gray);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-green);
+        }
+
+        .cta-btn {
+            background-color: var(--accent-orange);
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .cta-btn:hover {
+            background-color: #d65a3b;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-green) 0%, #40916c 100%);
+            color: white;
+            padding: 4rem 1.5rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .stat-item strong {
+            display: block;
+            font-size: 1.5rem;
+            color: var(--light-green);
+        }
+
+        .stat-item span {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Main Container */
+        .main-container {
+            max-width: var(--container-width);
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        /* Content Sections */
+        section {
+            background: var(--bg-white);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        h2 {
+            color: var(--primary-green);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light-green);
+        }
+
+        h3 {
+            color: var(--text-dark);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.8rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        /* Symptoms Grid */
+        .symptoms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .symptom-card {
+            border: 1px solid #eee;
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-align: center;
+        }
+
+        .symptom-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+            border-color: var(--light-green);
+        }
+
+        .symptom-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        /* Treatment Steps */
+        .treatment-steps {
+            counter-reset: step;
+        }
+
+        .step-item {
+            position: relative;
+            padding-left: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .step-item::before {
+            counter-increment: step;
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2.2rem;
+            height: 2.2rem;
+            background-color: var(--primary-green);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 2.2rem;
+            font-weight: bold;
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .sidebar-widget {
+            background: var(--bg-white);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .sidebar-widget h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-green);
+            border-left: 4px solid var(--accent-orange);
+            padding-left: 0.8rem;
+        }
+
+        .faq-list li {
+            margin-bottom: 1rem;
+            border-bottom: 1px dashed #eee;
+            padding-bottom: 0.5rem;
+        }
+
+        .faq-list li:last-child {
+            border-bottom: none;
+        }
+
+        .faq-list button {
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            font-size: 1rem;
+            color: var(--text-dark);
+            cursor: pointer;
+            padding: 0;
+            font-weight: 600;
+        }
+
+        .faq-list button:hover {
+            color: var(--primary-green);
+        }
+
+        .faq-content {
+            display: none;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+
+        .faq-list button.active + .faq-content {
+            display: block;
+        }
+
+        /* Chemical List */
+        .chem-list {
+            display: grid;
+            gap: 0.8rem;
+        }
+
+        .chem-item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.95rem;
+            padding: 0.5rem;
+            background: #f9f9f9;
+            border-radius: 4px;
+        }
+
+        .chem-name {
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-dark);
+            color: #ccc;
+            padding: 3rem 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--light-green);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .main-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-stats {
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <span>🌱</span> 农技百科
+            </div>
+            <nav class="nav-links">
+                <a href="#">首页</a>
+                <a href="#symptoms">症状识别</a>
+                <a href="#treatment">防治方法</a>
+                <a href="#faq">常见问题</a>
+            </nav>
+            <a href="#contact" class="cta-btn">联系专家</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>黄瓜炭疽病识别与科学防治全攻略</h1>
+            <p>黄瓜炭疽病是黄瓜种植中常见的真菌性病害，主要危害叶片、茎蔓和果实。掌握正确的识别方法和防治技术，是保障黄瓜高产稳产的关键。</p>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <strong>20-30%</strong>
+                    <span>潜在损失率</span>
+                </div>
+                <div class="stat-item">
+                    <strong>高湿</strong>
+                    <span>发病诱因</span>
+                </div>
+                <div class="stat-item">
+                    <strong>50-80%</strong>
+                    <span>防治成功率</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="main-container">
+            <!-- Left Column: Main Content -->
+            <div class="content-area">
+                
+                <!-- Symptoms Section -->
+                <section id="symptoms">
+                    <h2>一、症状识别：如何发现病害？</h2>
+                    <p>黄瓜炭疽病在黄瓜生长的各个时期均可发生，但以中后期危害较重。不同部位的病状有所不同：</p>
+                    
+                    <h3>1. 叶片症状</h3>
+                    <p>发病初期，叶片上出现水浸状的圆形或近圆形病斑，直径通常在2-10毫米之间。随着病情发展，病斑中央呈灰褐色，边缘有深绿色的晕环，病斑上常出现轮纹。严重时，多个病斑连片，导致叶片干枯脱落。</p>
+                    
+                    <h3>2. 茎蔓症状</h3>
+                    <p>主要发生在嫩茎或叶柄上。病斑呈长圆形，初期为淡黄色水渍状，后期变为黑褐色，稍凹陷。在潮湿条件下，病斑上常出现粉红色的粘质物（分生孢子盘）。</p>
+                    
+                    <h3>3. 果实症状</h3>
+                    <p>果实染病后，初生水渍状圆形斑点，后变为黑褐色，中央呈灰白色，稍凹陷，上生有轮纹。病斑大小不一，严重时病斑扩大连片，导致果实腐烂、软化，失去商品价值。</p>
+
+                    <div class="symptoms-grid">
+                        <div class="symptom-card">
+                            <span class="symptom-icon">🟡</span>
+                            <h4>初期特征</h4>
+                            <p style="font-size:0.9rem; margin:0;">水浸状圆形斑点，边缘深绿晕圈。</p>
+                        </div>
+                        <div class="symptom-card">
+                            <span class="symptom-icon">🟤</span>
+                            <h4>后期特征</h4>
+                            <p style="font-size:0.9rem; margin:0;">中央灰白，轮纹明显，表面粉红。</p>
+                        </div>
+                        <div class="symptom-card">
+                            <span class="symptom-icon">🍂</span>
+                            <h4>危害影响</h4>
+                            <p style="font-size:0.9rem; margin:0;">叶片早落，果实腐烂，产量锐减。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Treatment Section -->
+                <section id="treatment">
+                    <h2>二、科学防治：从农业到化学的综合方案</h2>
+                    <p>防治黄瓜炭疽病应坚持“预防为主，综合防治”的原则。化学防治必须注意轮换用药，避免产生抗药性。</p>
+
+                    <div class="treatment-steps">
+                        <div class="step-item">
+                            <h3>1. 农业防治（基础）</h3>
+                            <p><strong>选用抗病品种：</strong> 选择抗病性强的黄瓜品种进行种植。<br>
+                            <strong>轮作倒茬：</strong> 避免与葫芦科作物连作，实行3年以上轮作。<br>
+                            <strong>清洁田园：</strong> 及时清除病叶、病果，集中深埋或销毁，减少田间菌源。<br>
+                            <strong>加强管理：</strong> 合理密植，注意通风透光；避免大水漫灌，雨后及时排水；增施钾肥，提高植株抗病力。</p>
+                        </div>
+                        
+                        <div class="step-item">
+                            <h3>2. 种子处理</h3>
+                            <p>播种前用55℃温水浸种15分钟，不断搅拌，然后放入冷水中冷却，晾干后播种，可有效杀灭种子表面的病菌。</p>
+                        </div>
+
+                        <div class="step-item">
+                            <h3>3. 化学防治（核心）</h3>
+                            <p>在发病初期开始喷药，每隔7-10天喷一次，连续防治2-3次。以下为推荐药剂：</p>
+                            <div class="chem-list">
+                                <div class="chem-item">
+                                    <span class="chem-name">苯醚甲环唑</span>
+                                    <span>3000倍液</span>
+                                </div>
+                                <div class="chem-item">
+                                    <span class="chem-name">吡唑醚菌酯</span>
+                                    <span>1500倍液</span>
+                                </div>
+                                <div class="chem-item">
+                                    <span class="chem-name">氟硅唑</span>
+                                    <span>8000倍液</span>
+                                </div>
+                                <div class="chem-item">
+                                    <span class="chem-name">咪鲜胺</span>
+                                    <span>1000倍液</span>
+                                </div>
+                                <div class="chem-item">
+                                    <span class="chem-name">甲基硫菌灵</span>
+                                    <span>600倍液</span>
+                                </div>
+                            </div>
+                            <p style="font-size: 0.85rem; color: #666; margin-top: 0.5rem; background: #fff3cd; padding: 0.5rem; border-radius: 4px;">
+                                <strong>注意：</strong> 药剂应交替使用，避免长期单一使用同一种药剂。
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Prevention Tips -->
+                <section id="prevention">
+                    <h2>三、预防措施：降低发病风险</h2>
+                    <ul style="list-style-type: disc; padding-left: 1.5rem;">
+                        <li style="margin-bottom: 0.5rem;"><strong>环境控制：</strong> 保护地栽培应控制棚室湿度，夜间适当降低温度，减少结露时间。</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>棚室消毒：</strong> 每年冬茬前，对温室大棚进行彻底清洁，并用硫磺粉熏蒸消毒。</li>
+                        <li style="margin-bottom: 0.5rem;"><strong>棚膜更换：</strong> 选用无滴膜或流滴消雾膜，减少棚内水滴，改善光照条件。</li>
+                    </ul>
+                </section>
+
+            </div>
+
+            <!-- Right Column: Sidebar -->
+            <aside>
+                <div class="sidebar-widget">
+                    <h3>常见问题 (FAQ)</h3>
+                    <ul class="faq-list">
+                        <li>
+                            <button onclick="toggleFaq(this)">炭疽病和霜霉病怎么区分？</button>
+                            <div class="faq-content">
+                                霜霉病主要发生在叶片背面，病斑呈多角形，呈水渍状，湿度大时叶背有霜状霉层；而炭疽病病斑呈圆形，有轮纹，且主要发生在叶正面，严重时产生粉红色粘质物。
+                            </div>
+                        </li>
+                        <li>
+                            <button onclick="toggleFaq(this)">喷药时要注意什么？</button>
+                            <div class="faq-content">
+                                喷药应均匀周到，重点喷洒植株中下部叶片。避免在中午高温时段喷药，以免产生药害。采收前7天应停止用药。
+                            </div>
+                        </li>
+                        <li>
+                            <button onclick="toggleFaq(this)">炭疽病会传染给其他蔬菜吗？</button>
+                            <div class="faq-content">
+                                是的，该病菌属于真菌，主要侵染黄瓜、西葫芦等葫芦科作物，也会侵染甜瓜、西瓜等，因此需注意轮作和隔离。
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3>防治时间表</h3>
+                    <div style="font-size: 0.9rem;">
+                        <p style="margin-bottom: 0.5rem;"><strong>定植前：</strong> 种子处理 + 土壤消毒</p>
+                        <p style="margin-bottom: 0.5rem;"><strong>苗期：</strong> 每10天喷施一次保护性杀菌剂</p>
+                        <p style="margin-bottom: 0.5rem;"><strong>结果期：</strong> 发现病斑立即用药，7-10天一次</p>
+                        <p><strong>阴雨天：</strong> 减少浇水，使用烟雾剂或粉尘剂</p>
+                    </div>
+                </div>
+
+                <div class="sidebar-widget" style="background-color: var(--light-green);">
+                    <h3>专家提示</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-dark);">炭疽病在高温高湿环境下极易爆发。一旦发现零星病叶，应立即摘除并带出田外处理，同时喷洒药剂进行封锁，防止病害蔓延。</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>农技百科</h4>
+                <p style="font-size: 0.9rem; line-height: 1.8;">致力于提供科学、实用的农业种植技术知识，帮助农户解决种植难题，提高作物产量与品质。</p>
+            </div>
+            <div class="footer-col">
+                <h4>相关指南</h4>
+                <ul>
+                    <li><a href="#">黄瓜霜霉病防治</a></li>
+                    <li><a href="#">黄瓜灰霉病识别</a></li>
+                    <li><a href="#">黄瓜蚜虫防治方法</a></li>
+                    <li><a href="#">大棚蔬菜管理</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>联系我们</h4>
+                <ul>
+                    <li>电话：010-12345678</li>
+                    <li>邮箱：service@agritech.com</li>
+                    <li>地址：农业科技园区A栋</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 农技百科. All Rights Reserved. 仅供农业技术参考，请以专业农技人员指导为准。</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFaq(button) {
+            // 关闭其他所有打开的问答
+            const allButtons = document.querySelectorAll('.faq-list button');
+            allButtons.forEach(btn => {
+                if (btn !== button) {
+                    btn.classList.remove('active');
+                    btn.nextElementSibling.style.display = 'none';
+                }
+            });
+
+            // 切换当前问答的显示状态
+            const content = button.nextElementSibling;
+            if (content.style.display === 'block') {
+                button.classList.remove('active');
+                content.style.display = 'none';
+            } else {
+                button.classList.add('active');
+                content.style.display = 'block';
+            }
+        }
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+  </html>
