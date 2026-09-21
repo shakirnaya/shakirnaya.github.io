@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="濑户由衣 - 深度人物资料与作品研究平台。收录濑户由衣的生平经历、代表作品、演艺生涯、粉丝社区互动及最新动态资讯。">
+    <meta name="keywords" content="濑户由衣, 濑户由衣资料, 濑户由衣作品, 濑户由衣写真, 濑户由衣新闻">
+    <title>濑户由衣 - 人物资料库与演艺生涯深度解读</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e67e22;
+            --text-color: #333;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --border-radius: 8px;
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://picsum.photos/seed/sedoyuie/1920/600'); /* 占位图 */
+            background-size: cover;
+            background-position: center;
+            opacity: 0.2;
+            mix-blend-mode: overlay;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: #d35400;
+            transform: translateY(-2px);
+        }
+
+        /* 主内容区 */
+        main {
+            padding: 3rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 2.5rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* 个人简介卡片 */
+        .profile-section {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2rem;
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            margin-bottom: 3rem;
+        }
+
+        .profile-img {
+            width: 100%;
+            border-radius: var(--border-radius);
+            object-fit: cover;
+            aspect-ratio: 3/4;
+        }
+
+        .profile-info h2 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-item strong {
+            display: block;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .info-item p {
+            font-size: 1.1rem;
+        }
+
+        /* 作品展示 */
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .work-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .work-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .work-thumb {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .work-body {
+            padding: 1.5rem;
+        }
+
+        .work-tag {
+            font-size: 0.8rem;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .work-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .work-desc {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 1rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .read-more {
+            color: var(--accent-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* 资讯列表 */
+        .news-section {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            margin-top: 3rem;
+        }
+
+        .news-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .news-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .news-date {
+            color: #95a5a6;
+            font-size: 0.9rem;
+            min-width: 120px;
+        }
+
+        .news-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .news-content h3 a:hover {
+            text-decoration: underline;
+        }
+
+        .news-excerpt {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        .footer-content p {
+            opacity: 0.7;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a {
+            margin: 0 10px;
+            opacity: 0.8;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--accent-color);
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+                gap: 1rem;
+            }
+
+            .profile-section {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .news-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+
+            .news-date {
+                align-self: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">Sedoyuie<span>档案</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#">主页</a></li>
+                    <li><a href="#profile">个人资料</a></li>
+                    <li><a href="#works">影视作品</a></li>
+                    <li><a href="#news">最新资讯</a></li>
+                    <li><a href="#community">粉丝社区</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>濑户由衣</h1>
+            <p>探索日本演艺界知名人物濑户由衣的演艺生涯、代表作品及深度人物研究资料。</p>
+            <a href="#works" class="cta-button">查看作品集</a>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- 个人资料区域 -->
+        <section id="profile" class="profile-section">
+            <div class="profile-visual">
+                <img src="https://picsum.photos/seed/sedoyuie2/400/600" alt="濑户由衣写真" class="profile-img">
+            </div>
+            <div class="profile-info">
+                <h2>人物档案</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <strong>本名</strong>
+                        <p>濑户由衣</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>职业</strong>
+                        <p>演员 / 模特 / 歌手</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>出生地</strong>
+                        <p>日本东京都</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>出道年份</strong>
+                        <p>2010年</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>所属事务所</strong>
+                        <p>Top Star Entertainment</p>
+                    </div>
+                </div>
+                <p>濑户由衣是日本知名的艺人，自出道以来活跃于影视、综艺及时尚领域。她以其独特的气质和多变的演技风格深受观众喜爱，在多部热门电视剧中担任重要角色。除了演艺工作，她还涉足时尚界，是多家知名杂志的常驻模特。</p>
+                <div style="margin-top: 1.5rem;">
+                    <a href="#" style="color: var(--accent-color); font-weight: bold;">查看完整履历 &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 代表作展示 -->
+        <section id="works">
+            <h2 class="section-title">代表影视作品</h2>
+            <div class="works-grid">
+                <!-- 作品卡片 1 -->
+                <article class="work-card">
+                    <img src="https://picsum.photos/seed/movie1/400/500" alt="电影海报" class="work-thumb">
+                    <div class="work-body">
+                        <span class="work-tag">电影</span>
+                        <h3 class="work-title">《恋之季节》</h3>
+                        <p class="work-desc">濑户由衣在片中饰演一位充满活力的女大学生，与男主角展开了一段跨越四季的浪漫故事。影片上映后获得了不俗的票房成绩。</p>
+                        <a href="#" class="read-more">阅读详情</a>
+                    </div>
+                </article>
+
+                <!-- 作品卡片 2 -->
+                <article class="work-card">
+                    <img src="https://picsum.photos/seed/drama1/400/500" alt="剧集海报" class="work-thumb">
+                    <div class="work-body">
+                        <span class="work-tag">电视剧</span>
+                        <h3 class="work-title">《都市侦探》</h3>
+                        <p class="work-desc">这是一部悬疑推理剧，濑户由衣饰演的刑警凭借敏锐的直觉屡破奇案，展现了角色坚韧不拔的一面。</p>
+                        <a href="#" class="read-more">阅读详情</a>
+                    </div>
+                </article>
+
+                <!-- 作品卡片 3 -->
+                <article class="work-card">
+                    <img src="https://picsum.photos/seed/tvshow/400/500" alt="综艺截图" class="work-thumb">
+                    <div class="work-body">
+                        <span class="work-tag">综艺节目</span>
+                        <h3 class="work-title">《周末大冒险》</h3>
+                        <p class="work-desc">作为固定嘉宾参与本季综艺，濑户由衣以幽默风趣的主持风格和出色的游戏竞技能力赢得了大量粉丝。</p>
+                        <a href="#" class="read-more">阅读详情</a>
+                    </div>
+                </article>
+
+                <!-- 作品卡片 4 -->
+                <article class="work-card">
+                    <img src="https://picsum.photos/seed/fashion/400/500" alt="杂志封面" class="work-thumb">
+                    <div class="work-body">
+                        <span class="work-tag">时尚写真</span>
+                        <h3 class="work-title">《Vogue》年度特辑</h3>
+                        <p class="work-desc">独家专访与拍摄，展示了濑户由衣在时尚领域的独特见解和高级感造型，被誉为年度最佳时尚大片之一。</p>
+                        <a href="#" class="read-more">阅读详情</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 资讯动态 -->
+        <section id="news" class="news-section">
+            <h2 class="section-title">最新动态</h2>
+            <div class="news-list">
+                <div class="news-item">
+                    <div class="news-date">2023-10-15</div>
+                    <div class="news-content">
+                        <h3><a href="#">濑户由衣确认主演新电影《星光之下》</a></h3>
+                        <p class="news-excerpt">据悉，濑户由衣将接棒知名影星，出演年度重磅情感电影《星光之下》，预计明年春季上映。</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="news-date">2023-09-22</div>
+                    <div class="news-content">
+                        <h3><a href="#">个人巡回写真集《东京日记》销量突破十万册</a></h3>
+                        <p class="news-excerpt">纪念出道十周年的写真集发布后反响热烈，不仅登上了各大书店畅销榜，更在社交媒体引发了热议。</p>
+                    </div>
+                </div>
+                <div class="news-item">
+                    <div class="news-date">2023-08-10</div>
+                    <div class="news-content">
+                        <h3><a href="#">担任慈善活动“爱与希望”形象大使</a></h3>
+                        <p class="news-excerpt">濑户由衣受邀担任该慈善活动的形象大使，呼吁大家关注儿童心理健康问题，并参与线下公益募捐。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 粉丝社区预览 -->
+        <section id="community" style="margin-top: 3rem; text-align: center;">
+            <h2 class="section-title">加入粉丝社区</h2>
+            <p style="margin-bottom: 2rem; color: #666;">第一时间获取最新消息，参与粉丝讨论，分享你的看法。</p>
+            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <a href="#" class="cta-button" style="background-color: #333;">关注微博</a>
+                <a href="#" class="cta-button" style="background-color: #3b5998;">加入推特</a>
+                <a href="#" class="cta-button" style="background-color: #c13584;">加入Instagram</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-links">
+                <a href="#">关于我们</a>
+                <a href="#">联系方式</a>
+                <a href="#">免责声明</a>
+                <a href="#">隐私政策</a>
+            </div>
+            <p style="margin-top: 1rem;">&copy; 2023 濑户由衣资料库. All Rights Reserved.</p>
+            <p style="font-size: 0.8rem; margin-top: 0.5rem; opacity: 0.5;">本站内容仅供资料参考，非官方网站。</p>
+        </div>
+    </footer>
+
+</body>
+</html>
