@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="关岭二手房专业交易平台，提供关岭县最新二手房房源信息、房价走势、学区划分及购房指南。实时更新关岭二手房买卖、出租房源，助您轻松找到理想家园。">
+    <meta name="keywords" content="关岭二手房,关岭县二手房,关岭房产,关岭租房,关岭新房,关岭二手房交易">
+    <title>关岭二手房-本地优质房源与购房指南平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e67e22;
+            --bg-color: #f4f6f8;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-sub: #666666;
+            --border-color: #e1e4e8;
+            --shadow: 0 2px 8px rgba(0,0,0,0.06);
+            --radius: 8px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-bottom: 40px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--accent-color);
+        }
+
+        .user-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #d35400;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+            color: white;
+            padding: 60px 0;
+            margin-bottom: 30px;
+        }
+
+        .hero-content {
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .search-box {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius);
+            display: flex;
+            gap: 10px;
+            max-width: 800px;
+            margin: 0 auto;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            flex-wrap: wrap;
+        }
+
+        .input-group {
+            flex: 1;
+            min-width: 150px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .input-group label {
+            font-size: 12px;
+            color: var(--text-sub);
+            font-weight: 600;
+        }
+
+        .input-group select, .input-group input {
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .input-group input:focus {
+            border-color: var(--accent-color);
+        }
+
+        .search-btn {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 0 30px;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 28px;
+            transition: background 0.2s;
+        }
+
+        .search-btn:hover {
+            background-color: #d35400;
+        }
+
+        /* Stats */
+        .stats-bar {
+            background: var(--card-bg);
+            padding: 20px 0;
+            margin-bottom: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-num {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: var(--text-sub);
+        }
+
+        /* Filters */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--primary-color);
+            border-left: 4px solid var(--accent-color);
+            padding-left: 12px;
+        }
+
+        .filter-tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            padding: 6px 14px;
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            font-size: 13px;
+            color: var(--text-sub);
+            cursor: pointer;
+        }
+
+        .tag:hover, .tag.active {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        /* Property Grid */
+        .property-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            background-color: #eee;
+            position: relative;
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0,0,0,0.6);
+            color: white;
+            padding: 4px 8px;
+            font-size: 12px;
+            border-radius: 4px;
+        }
+
+        .card-body {
+            padding: 15px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-price {
+            color: #e74c3c;
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .card-price small {
+            font-size: 14px;
+            color: var(--text-sub);
+            font-weight: normal;
+        }
+
+        .card-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-address {
+            font-size: 13px;
+            color: var(--text-sub);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .card-features {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            color: var(--text-sub);
+            border-top: 1px solid var(--border-color);
+            padding-top: 12px;
+            margin-top: auto;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* Guide Section */
+        .guide-section {
+            background: white;
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .guide-item {
+            text-align: center;
+        }
+
+        .guide-icon {
+            width: 60px;
+            height: 60px;
+            background: #fdf2e9;
+            color: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 24px;
+        }
+
+        .guide-item h3 {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .guide-item p {
+            font-size: 14px;
+            color: var(--text-sub);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+            font-size: 14px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #95a5a6;
+            font-size: 13px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+            
+            .nav-links {
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            .search-btn {
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .hero h1 {
+                font-size: 24px;
+            }
+
+            .stats-bar {
+                justify-content: flex-start;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                关岭<span>安居</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#" class="active">首页</a>
+                <a href="#">二手房</a>
+                <a href="#">新房</a>
+                <a href="#">租房</a>
+                <a href="#">资讯</a>
+            </nav>
+            <div class="user-actions">
+                <button class="btn btn-outline">登录</button>
+                <button class="btn btn-primary">免费发布房源</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>关岭二手房交易服务</h1>
+            <p>专业、真实、高效的本地房产服务平台，为您提供关岭县最全二手房信息</p>
+            <div class="search-box">
+                <div class="input-group">
+                    <label>所在区域</label>
+                    <select>
+                        <option>关岭布依族苗族自治县</option>
+                        <option>关索街道</option>
+                        <option>龙潭街道</option>
+                        <option>顶云街道</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>房屋类型</label>
+                    <select>
+                        <option>不限</option>
+                        <option>住宅</option>
+                        <option>商铺</option>
+                        <option>别墅</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>价格范围</label>
+                    <select>
+                        <option>不限</option>
+                        <option>50万以内</option>
+                        <option>50-100万</option>
+                        <option>100万以上</option>
+                    </select>
+                </div>
+                <button class="search-btn">搜索房源</button>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="stats-bar">
+            <div class="stat-item">
+                <div class="stat-num">1,240+</div>
+                <div class="stat-label">在售房源</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">856</div>
+                <div class="stat-label">今日新增</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">12.5万</div>
+                <div class="stat-label">本月成交</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">98%</div>
+                <div class="stat-label">好评率</div>
+            </div>
+        </div>
+
+        <section class="filter-section">
+            <div class="section-header">
+                <h2 class="section-title">推荐房源</h2>
+                <div class="filter-tags">
+                    <span class="tag active">最新上架</span>
+                    <span class="tag">价格最低</span>
+                    <span class="tag">急售</span>
+                    <span class="tag">满五唯一</span>
+                </div>
+            </div>
+
+            <div class="property-grid">
+                <!-- Card 1 -->
+                <article class="card">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/seed/house1/400/300" alt="关岭二手房房源图片">
+                        <span class="card-badge">满五唯一</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-price">68万 <small>元</small></div>
+                        <h3 class="card-title">关岭县龙潭街道 两室一厅 精装修</h3>
+                        <div class="card-address">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            关岭县龙潭街道
+                        </div>
+                        <div class="card-features">
+                            <span class="feature-item">89㎡</span>
+                            <span class="feature-item">南北通透</span>
+                            <span class="feature-item">电梯房</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="card">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/seed/house2/400/300" alt="关岭二手房房源图片">
+                        <span class="card-badge">急售</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-price">125万 <small>元</small></div>
+                        <h3 class="card-title">关索街道 三室两厅 高层观景房</h3>
+                        <div class="card-address">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            关索街道中心地段
+                        </div>
+                        <div class="card-features">
+                            <span class="feature-item">120㎡</span>
+                            <span class="feature-item">精装修</span>
+                            <span class="feature-item">近学校</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="card">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/seed/house3/400/300" alt="关岭二手房房源图片">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-price">42万 <small>元</small></div>
+                        <h3 class="card-title">顶云街道 一室一厅 小户型</h3>
+                        <div class="card-address">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            顶云街道
+                        </div>
+                        <div class="card-features">
+                            <span class="feature-item">55㎡</span>
+                            <span class="feature-item">拎包入住</span>
+                            <span class="feature-item">房东直租</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="card">
+                    <div class="card-img">
+                        <img src="https://picsum.photos/seed/house4/400/300" alt="关岭二手房房源图片">
+                        <span class="card-badge">学区房</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-price">98万 <small>元</small></div>
+                        <h3 class="card-title">关岭县中心学区房 优质教育资源</h3>
+                        <div class="card-address">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            关索街道
+                        </div>
+                        <div class="card-features">
+                            <span class="feature-item">95㎡</span>
+                            <span class="feature-item">三室两厅</span>
+                            <span class="feature-item">近公交</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <button class="btn btn-outline" style="padding: 10px 40px;">查看更多房源</button>
+            </div>
+        </section>
+
+        <section class="guide-section">
+            <div class="section-header">
+                <h2 class="section-title">关岭购房指南</h2>
+            </div>
+            <div class="guide-grid">
+                <div class="guide-item">
+                    <div class="guide-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                    </div>
+                    <h3>交易流程</h3>
+                    <p>详细了解关岭二手房买卖的签约、过户、交房全流程，规避风险。</p>
+                </div>
+                <div class="guide-item">
+                    <div class="guide-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                    </div>
+                    <h3>价格参考</h3>
+                    <p>关岭县各板块最新房价走势分析，助您精准判断购房时机。</p>
+                </div>
+                <div class="guide-item">
+                    <div class="guide-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    </div>
+                    <h3>注意事项</h3>
+                    <p>查验房产证、土地证，核实户口迁移情况，保障资金安全。</p>
+                </div>
+                <div class="guide-item">
+                    <div class="guide-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+                    </div>
+                    <h3>贷款政策</h3>
+                    <p>关岭地区最新商业贷款与公积金贷款政策解读与申请指南。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="guide-section" style="background-color: #f8f9fa;">
+            <div class="section-header">
+                <h2 class="section-title">常见问题 (FAQ)</h2>
+            </div>
+            <div style="max-width: 800px;">
+                <div style="margin-bottom: 20px; border-bottom: 1px solid var(--border-color); padding-bottom: 15px;">
+                    <h4 style="font-size: 16px; margin-bottom: 8px;">在关岭买二手房需要缴纳哪些税费？</h4>
+                    <p style="font-size: 14px; color: var(--text-sub);">主要涉及契税（首套房1%-1.5%，二套房1%-2%）、个税（满五唯一免征，否则为1%或差额20%）、增值税（满两年免征）。具体金额需根据房屋面积和房龄计算。</p>
+                </div>
+                <div style="margin-bottom: 20px; border-bottom: 1px solid var(--border-color); padding-bottom: 15px;">
+                    <h4 style="font-size: 16px; margin-bottom: 8px;">关岭二手房交易过户需要多长时间？</h4>
+                    <p style="font-size: 14px; color: var(--text-sub);">如果手续齐全，一般流程在15-20个工作日内完成。包括网签、审核、缴税和领证等环节。建议提前准备好所有材料，并关注当地房产交易中心的通知。</p>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <h4 style="font-size: 16px; margin-bottom: 8px;">如何查询关岭二手房的学区划分？</h4>
+                    <p style="font-size: 14px; color: var(--text-sub);">学区划分通常由当地教育局每年公布。购买前请务必咨询关岭县教育局或前往相关学校确认，因为学区政策可能会有微调，且以当年官方文件为准。</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关岭安居</h4>
+                    <p style="color: #bdc3c7; font-size: 14px; line-height: 1.8;">
+                        专注于关岭布依族苗族自治县本地房产信息服务，致力于为居民提供真实、透明、便捷的二手房交易体验。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">二手房首页</a></li>
+                        <li><a href="#">新房楼盘</a></li>
+                        <li><a href="#">租房信息</a></li>
+                        <li><a href="#">二手房贷款</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li><a href="#">客服热线：0851-XXXXXXX</a></li>
+                        <li><a href="#">工作时间：周一至周日 9:00-21:00</a></li>
+                        <li><a href="#">投诉建议：support@guanling.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 关岭安居二手房服务平台 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+                                                                                                                             </html>
