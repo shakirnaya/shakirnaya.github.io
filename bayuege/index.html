@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="芭乐歌（Bala Ge）是具有浓郁地方特色的传统民歌集锦，包含山歌、小调与劳动号子。本站提供芭乐歌的起源背景、经典曲目赏析、演唱技巧指南及地方文化保护现状，是民俗音乐爱好者的首选资源平台。">
+    <meta name="keywords" content="芭乐歌, 民歌, 传统音乐, 地方戏曲, 民俗文化, 演唱技巧">
+    <title>芭乐歌-传统民歌集锦与民俗文化赏析平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B4513; /* SaddleBrown - Earthy tone */
+            --secondary-color: #D2691E; /* Chocolate */
+            --accent-color: #F4A460; /* SandyBrown */
+            --bg-color: #FAF9F6; /* Warm Off-white */
+            --card-bg: #FFFFFF;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-color: #E0E0E0;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Container */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo svg {
+            width: 32px;
+            height: 32px;
+            fill: var(--primary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--secondary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--secondary-color);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://picsum.photos/seed/musicfolk/1600/900');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(139, 69, 19, 0.3);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 4rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Features / Types */
+        .types-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .type-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .type-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .type-img {
+            height: 180px;
+            width: 100%;
+        }
+
+        .type-content {
+            padding: 1.5rem;
+        }
+
+        .type-content h3 {
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        .type-content p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Featured Songs */
+        .song-list {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .song-item {
+            display: flex;
+            align-items: center;
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            transition: border-color 0.3s;
+        }
+
+        .song-item:hover {
+            border-color: var(--secondary-color);
+        }
+
+        .song-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--bg-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+            color: var(--primary-color);
+        }
+
+        .song-info {
+            flex: 1;
+        }
+
+        .song-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .song-meta {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .song-btn {
+            padding: 0.5rem 1.2rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 0.9rem;
+            color: var(--text-main);
+        }
+
+        .song-btn:hover {
+            background-color: var(--bg-color);
+            border-color: var(--text-light);
+        }
+
+        /* Guide / FAQ */
+        .guide-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .guide-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        .guide-text p {
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+        }
+
+        .faq-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+        }
+
+        .faq-question:hover {
+            background-color: var(--bg-color);
+        }
+
+        .faq-answer {
+            padding: 0 1rem 1rem;
+            color: var(--text-light);
+            font-size: 0.95rem;
+            display: none;
+            border-top: 1px solid transparent;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+            border-top-color: var(--border-color);
+            padding-top: 1rem;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #ccc;
+            padding: 3rem 0;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #444;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+            }
+            
+            nav ul {
+                margin-top: 1rem;
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .guide-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+                </svg>
+                芭乐歌
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#types">民歌分类</a></li>
+                    <li><a href="#featured">经典曲目</a></li>
+                    <li><a href="#guide">演唱指南</a></li>
+                    <li><a href="#about">关于我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>聆听泥土的呼吸，传承民族的记忆</h1>
+                <p>芭乐歌（Bala Ge）不仅是一种音乐形式，更是地方风土人情与历史变迁的活化石。探索那些流传百年的旋律，感受原生态的质朴与力量。</p>
+                <a href="#featured" class="btn btn-primary">开始聆听</a>
+            </div>
+        </section>
+
+        <!-- Types Section -->
+        <section id="types">
+            <div class="container">
+                <div class="section-header">
+                    <h2>民歌分类与特点</h2>
+                    <p>芭乐歌作为民间音乐的集合，根据地域、用途和风格通常分为三大类，每一类都有其独特的艺术魅力。</p>
+                </div>
+                <div class="types-grid">
+                    <article class="type-card">
+                        <img src="https://picsum.photos/seed/mountain/400/300" alt="山歌" class="type-img">
+                        <div class="type-content">
+                            <h3>山歌</h3>
+                            <p>主要在山野间即兴演唱，旋律高亢嘹亮，节奏自由。常用于表达爱慕、抒发情感或驱散孤独，具有极强的感染力。</p>
+                        </div>
+                    </article>
+                    <article class="type-card">
+                        <img src="https://picsum.photos/seed/small/400/300" alt="小调" class="type-img">
+                        <div class="type-content">
+                            <h3>小调</h3>
+                            <p>在城镇街头、庭院中流传的民歌，结构规整，曲调细腻优美。多讲述民间故事，具有叙事性和娱乐性。</p>
+                        </div>
+                    </article>
+                    <article class="type-card">
+                        <img src="https://picsum.photos/seed/labor/400/300" alt="劳动号子" class="type-img">
+                        <div class="type-content">
+                            <h3>劳动号子</h3>
+                            <p>伴随体力劳动而唱，具有协调动作、鼓舞士气的作用。节奏感强，律动鲜明，是劳动人民智慧的直接体现。</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Songs Section -->
+        <section id="featured" style="background-color: #fff;">
+            <div class="container">
+                <div class="section-header">
+                    <h2>经典曲目赏析</h2>
+                    <p>精选各地最具代表性的芭乐歌作品，带您领略不同地域的音韵之美。</p>
+                </div>
+                <div class="song-list">
+                    <div class="song-item">
+                        <div class="song-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                        <div class="song-info">
+                            <div class="song-title">《高山流水·对歌》</div>
+                            <div class="song-meta">类别：山歌 | 地域：西南山区 | 赏析：此曲展现了山民在劳作间隙的即兴对唱，音域宽广，情感真挚。</div>
+                        </div>
+                        <button class="song-btn">试听片段</button>
+                    </div>
+                    <div class="song-item">
+                        <div class="song-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                        <div class="song-info">
+                            <div class="song-title">《船工号子·拉纤行》</div>
+                            <div class="song-meta">类别：劳动号子 | 地域：长江流域 | 赏析：节奏强劲有力，模拟了船工拉纤时的动作，体现了团结协作的精神。</div>
+                        </div>
+                        <button class="song-btn">试听片段</button>
+                    </div>
+                    <div class="song-item">
+                        <div class="song-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                        <div class="song-info">
+                            <div class="song-title">《绣花灯·采莲曲》</div>
+                            <div class="song-meta">类别：小调 | 地域：江南水乡 | 赏析：旋律婉转柔和，歌词描绘了水乡女子的生活场景，极具生活气息。</div>
+                        </div>
+                        <button class="song-btn">试听片段</button>
+                    </div>
+                    <div class="song-item">
+                        <div class="song-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        </div>
+                        <div class="song-info">
+                            <div class="song-title">《迎亲嫁女·哭嫁歌》</div>
+                            <div class="song-meta">类别：习俗歌 | 地域：部分少数民族地区 | 赏析：哭嫁歌是传统婚俗的一部分，既宣泄情绪又包含对未来的期许。</div>
+                        </div>
+                        <button class="song-btn">试听片段</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guide Section -->
+        <section id="guide">
+            <div class="container">
+                <div class="guide-layout">
+                    <div class="guide-text">
+                        <h3>如何欣赏与演唱芭乐歌</h3>
+                        <p>芭乐歌源于生活，高于生活。要真正领略其魅力，建议从以下几个方面入手：</p>
+                        <ul style="list-style: disc; margin-left: 1.5rem; color: var(--text-light);">
+                            <li style="margin-bottom: 0.5rem;"><strong>了解背景：</strong>每一首民歌背后都有特定的历史背景和地域文化，了解这些能加深对曲目的理解。</li>
+                            <li style="margin-bottom: 0.5rem;"><strong>模仿气息：</strong>芭乐歌讲究气息深沉，模仿时应注重胸腔共鸣，而非单纯模仿高音。</li>
+                            <li style="margin-bottom: 0.5rem;"><strong>保持原真：</strong>在改编或演唱时，尽量保留民歌的原始韵味和方言特色。</li>
+                        </ul>
+                        <a href="#" style="color: var(--secondary-color); font-weight: 600; margin-top: 1rem; display: inline-block;">查看更多演唱技巧 &rarr;</a>
+                    </div>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <div class="faq-question">芭乐歌和流行歌曲有什么区别？ <span>+</span></div>
+                            <div class="faq-answer">芭乐歌通常即兴创作，没有固定的乐谱，更强调情感的自然流露；而流行歌曲有固定的编曲和歌词，更注重舞台表现和商业传播。</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">现在还能听到原生态的芭乐歌吗？ <span>+</span></div>
+                            <div class="faq-answer">随着现代化进程的加快，原生态民歌的生存空间受到了一定挤压。但在许多偏远山区和少数民族聚居地，依然保留着传统的演唱习惯。</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">学习芭乐歌需要什么基础？ <span>+</span></div>
+                            <div class="faq-answer">不需要专业的乐理基础，但需要具备良好的听觉辨别能力和对情感的感知力。只要热爱生活、热爱音乐，都可以尝试模仿和练习。</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="about">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于芭乐歌</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6;">致力于保护和传承中国丰富多彩的民间音乐文化，搭建传统音乐与现代听众之间的桥梁。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">民歌百科</a></li>
+                        <li><a href="#">曲库下载</a></li>
+                        <li><a href="#">文化讲座</a></li>
+                        <li><a href="#">投稿建议</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li>邮箱: contact@balage-music.com</li>
+                        <li>电话: 400-123-4567</li>
+                        <li>地址: 文化艺术中心B座302</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 芭乐歌文化传承平台. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Accordion Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
