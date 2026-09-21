@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="元贞利亨官方网站，提供专业的企业服务解决方案、战略咨询及管理优化服务，助力企业实现可持续发展与价值增长。">
+    <meta name="keywords" content="元贞利亨,企业服务,战略咨询,管理优化,可持续发展">
+    <title>元贞利亨-企业战略咨询与可持续发展解决方案专家</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #1a3c6e; /* 深蓝：专业、稳重 */
+            --secondary-color: #2c5282; /* 中蓝 */
+            --accent-color: #c53030; /* 红色点缀：强调、行动 */
+            --bg-light: #f7fafc;
+            --text-main: #2d3748;
+            --text-light: #718096;
+            --white: #ffffff;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+            --container-width: 1200px;
+            --header-height: 80px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            color: var(--text-main);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* Utility Classes */
+        .container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            font-size: 16px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* Header */
+        header {
+            height: var(--header-height);
+            background-color: var(--white);
+            box-shadow: var(--shadow-sm);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--text-main);
+            margin-left: 5px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: calc(100vh - var(--header-height));
+            background: linear-gradient(135deg, rgba(26, 60, 110, 0.9) 0%, rgba(44, 82, 130, 0.8) 100%), url('https://picsum.photos/seed/office/1920/1080.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            padding-top: var(--header-height);
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 600px;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image img {
+            border-radius: 8px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .section-title {
+            font-size: 32px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            color: var(--accent-color);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 14px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--text-light);
+        }
+
+        /* Services Section */
+        .services {
+            background-color: var(--white);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            background: var(--bg-light);
+            padding: 40px 30px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border-top: 4px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-md);
+            background: var(--white);
+            border-top-color: var(--primary-color);
+        }
+
+        .service-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .service-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        .service-link {
+            color: var(--primary-color);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .service-link::after {
+            content: '→';
+            margin-left: 5px;
+            transition: margin-left 0.3s;
+        }
+
+        .service-link:hover::after {
+            margin-left: 10px;
+        }
+
+        /* Statistics Section */
+        .stats {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 60px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .stat-item p {
+            opacity: 0.8;
+            font-size: 16px;
+        }
+
+        /* Process Section */
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 50px;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #e2e8f0;
+            z-index: 0;
+        }
+
+        .step {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            flex: 1;
+            padding: 0 15px;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background-color: var(--white);
+            border: 2px solid var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            transition: all 0.3s ease;
+        }
+
+        .step:hover .step-number {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .step h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .step p {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: var(--bg-light);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 50px;
+            background-color: var(--white);
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .contact-info h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+
+        .contact-icon {
+            margin-right: 15px;
+            color: var(--primary-color);
+            font-size: 20px;
+        }
+
+        .contact-form .form-group {
+            margin-bottom: 20px;
+        }
+
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .contact-form input,
+        .contact-form select,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd5e0;
+            border-radius: 4px;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        .contact-form input:focus,
+        .contact-form select:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(26, 60, 110, 0.1);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a202c;
+            color: #a0aec0;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            color: var(--white);
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #2d3748;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+            
+            .about-grid, .contact-container, .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-steps::before {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            nav ul {
+                position: fixed;
+                top: var(--header-height);
+                left: 0;
+                width: 100%;
+                background-color: var(--white);
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: var(--shadow-md);
+                transform: translateY(-150%);
+                transition: transform 0.3s ease;
+                z-index: 999;
+            }
+
+            nav ul.active {
+                transform: translateY(0);
+            }
+
+            nav ul li {
+                text-align: center;
+                padding: 15px 0;
+                border-bottom: 1px solid #f7fafc;
+            }
+
+            .hero {
+                text-align: center;
+                justify-content: center;
+            }
+
+            .hero-content {
+                padding: 0 20px;
+            }
+            
+            .hero p {
+                margin: 0 auto 40px;
+            }
+
+            .btn {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                元贞利亨<span>.</span>
+            </a>
+            <div class="mobile-menu-btn" id="mobileMenuBtn">☰</div>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="#home" class="active">首页</a></li>
+                    <li><a href="#about">关于我们</a></li>
+                    <li><a href="#services">核心服务</a></li>
+                    <li><a href="#process">服务流程</a></li>
+                    <li><a href="#contact">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="section-subtitle">企业战略咨询专家</span>
+                <h1>赋能企业增长，共创可持续未来</h1>
+                <p>元贞利亨致力于为各类企业提供全方位的战略规划、组织变革及数字化转型解决方案，通过深度洞察与专业落地，助力客户在复杂商业环境中脱颖而出。</p>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn btn-primary">预约咨询</a>
+                    <a href="#services" class="btn btn-outline" style="color:white; border-color:white; margin-left: 10px;">了解服务</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <span class="section-subtitle">关于元贞利亨</span>
+                    <h2 class="section-title">以专业驱动商业价值</h2>
+                    <p>元贞利亨是一家立足本土、放眼全球的专业咨询机构。我们汇聚了来自战略、运营、IT及人力资源等领域的资深专家，拥有丰富的行业实战经验。</p>
+                    <p>我们的核心使命是帮助企业厘清战略方向，优化资源配置，提升运营效率，从而实现长期的可持续增长。无论是初创企业的快速成长，还是成熟企业的转型升级，元贞利亨都能提供量身定制的支持。</p>
+                    <div style="margin-top: 30px;">
+                        <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                            <li style="display: flex; align-items: center; color: var(--text-main); font-weight: 500;">
+                                <span style="color: var(--accent-color); margin-right: 8px;">✔</span> 定制化解决方案
+                            </li>
+                            <li style="display: flex; align-items: center; color: var(--text-main); font-weight: 500;">
+                                <span style="color: var(--accent-color); margin-right: 8px;">✔</span> 全生命周期服务
+                            </li>
+                            <li style="display: flex; align-items: center; color: var(--text-main); font-weight: 500;">
+                                <span style="color: var(--accent-color); margin-right: 8px;">✔</span> 跨行业资源整合
+                            </li>
+                            <li style="display: flex; align-items: center; color: var(--text-main); font-weight: 500;">
+                                <span style="color: var(--accent-color); margin-right: 8px;">✔</span> 实战派专家团队
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://picsum.photos/seed/consulting/600/400.jpg" alt="元贞利亨团队讨论场景">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>10+</h3>
+                    <p>行业深耕年限</p>
+                </div>
+                <div class="stat-item">
+                    <h3>200+</h3>
+                    <p>成功交付案例</p>
+                </div>
+                <div class="stat-item">
+                    <h3>50+</h3>
+                    <p>资深顾问团队</p>
+                </div>
+                <div class="stat-item">
+                    <h3>98%</h3>
+                    <p>客户满意度</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding services">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-subtitle">我们的业务领域</span>
+                <h2 class="section-title">全方位企业管理解决方案</h2>
+                <p style="max-width: 600px; margin: 0 auto 50px; color: var(--text-light);">
+                    我们的业务覆盖企业发展的各个关键环节，从顶层设计到底层执行，提供一站式服务支持。
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <article class="service-card">
+                    <div class="service-icon">🚀</div>
+                    <h3>战略规划与咨询</h3>
+                    <p>基于市场环境与行业趋势，为企业制定长远发展蓝图，明确市场定位与竞争策略，确保企业在激烈的市场竞争中占据有利地位。</p>
+                    <a href="#contact" class="service-link">查看详情</a>
+                </article>
+
+                <!-- Service 2 -->
+                <article class="service-card">
+                    <div class="service-icon">⚙️</div>
+                    <h3>组织变革与人才管理</h3>
+                    <p>优化组织架构，设计科学的绩效管理体系与激励机制，通过人才盘点与培训，打造高效能组织，激发团队最大潜能。</p>
+                    <a href="#contact" class="service-link">查看详情</a>
+                </article>
+
+                <!-- Service 3 -->
+                <article class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>数字化转型咨询</h3>
+                    <p>协助企业利用大数据、云计算及人工智能等前沿技术，重构业务流程，实现数据驱动决策，提升数字化运营能力。</p>
+                    <a href="#contact" class="service-link">查看详情</a>
+                </article>
+
+                <!-- Service 4 -->
+                <article class="service-card">
+                    <div class="service-icon">📈</div>
+                    <h3>运营效率优化</h3>
+                    <p>深入剖析企业运营痛点，通过精益管理工具与方法，消除浪费，降低成本，显著提升生产运营效率与供应链管理水平。</p>
+                    <a href="#contact" class="service-link">查看详情</a>
+                </article>
+
+                <!-- Service 5 -->
+                <article class="service-card">
+                    <div class="service-icon">🛡️</div>
+                    <h3>风险控制与合规</h3>
+                    <p>建立健全企业内控体系与风险预警机制，确保企业经营活动合法合规，有效规避经营风险，保障企业资产安全。</p>
+                    <a href="#contact" class="service-link">查看详情</a>
+                </article>
+
+                <!-- Service 6 -->
+                <article class="service-card">
+                    <div class="service-icon">🌍</div>
+                    <h3>可持续发展战略</h3>
+                    <p>结合ESG理念，协助企业制定绿色发展战略，实现经济效益与社会责任的双重提升，构建良好的企业社会形象。</p>
+                    <a href="#contact" class="service-link">查看详情</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="section-padding">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-subtitle">工作流程</span>
+                <h2 class="section-title">严谨高效的咨询流程</h2>
+            </div>
+            
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <h4>需求诊断</h4>
+                    <p>深入访谈与调研，精准识别企业痛点与核心需求。</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <h4>方案设计</h4>
+                    <p>组建专家团队，制定定制化策略与实施路径。</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <h4>落地辅导</h4>
+                    <p>提供培训、辅导及驻场支持，确保方案有效执行。</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">04</div>
+                    <h4>效果评估</h4>
+                    <p>建立跟踪机制，评估实施成果，持续优化改进。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding contact">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-subtitle">联系方式</span>
+                <h2 class="section-title">开启合作之旅</h2>
+                <p style="margin-bottom: 50px; color: var(--text-light);">无论您有任何疑问或需求，欢迎随时与我们联系。</p>
+            </div>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>联系方式</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <strong>公司地址：</strong>
+                            <p style="color: var(--text-light); margin-top: 5px;">北京市朝阳区建国路88号SOHO现代城A座12层</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <strong>咨询热线：</strong>
+                            <p style="color: var(--text-light); margin-top: 5px;">400-123-4567 (工作日 9:00-18:00)</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <strong>电子邮箱：</strong>
+                            <p style="color: var(--text-light); margin-top: 5px;">contact@yuanzhenliheng.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">⏰</div>
+                        <div>
+                            <strong>服务时间：</strong>
+                            <p style="color: var(--text-light); margin-top: 5px;">周一至周五 9:00 - 18:00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form onsubmit="event.preventDefault(); alert('感谢您的留言，我们的顾问将在24小时内与您联系。');">
+                        <div class="form-group">
+                            <label for="name">您的姓名 *</label>
+                            <input type="text" id="name" required placeholder="请输入姓名">
+                        </div>
+                        <div class="form-group">
+                            <label for="company">公司名称</label>
+                            <input type="text" id="company" placeholder="请输入公司名称">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">联系电话 *</label>
+                            <input type="tel" id="phone" required placeholder="请输入手机号码">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">感兴趣的服务</label>
+                            <select id="service">
+                                <option value="">请选择服务类型</option>
+                                <option value="strategy">战略规划</option>
+                                <option value="digital">数字化转型</option>
+                                <option value="hr">人力资源</option>
+                                <option value="other">其他咨询</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">留言内容 *</label>
+                            <textarea id="message" rows="5" required placeholder="请简述您的需求或问题"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">提交留言</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="footer-logo">元贞利亨</a>
+                    <p style="font-size: 14px; line-height: 1.8;">
+                        专注于为成长型企业提供高质量的管理咨询服务。我们以专业、诚信、务实的服务态度，助力客户实现商业成功。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#about">关于我们</a></li>
+                        <li><a href="#services">核心服务</a></li>
+                        <li><a href="#contact">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>服务领域</h4>
+                    <ul>
+                        <li><a href="#">战略规划</a></li>
+                        <li><a href="#">数字化转型</a></li>
+                        <li><a href="#">组织优化</a></li>
+                        <li><a href="#">风险管理</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>订阅动态</h4>
+                    <p style="font-size: 14px; margin-bottom: 15px;">获取最新的行业洞察与咨询资讯。</p>
+                    <div style="display: flex;">
+                        <input type="email" placeholder="您的邮箱" style="padding: 8px; border: none; border-radius: 4px 0 0 4px; flex: 1;">
+                        <button style="padding: 8px 12px; background: var(--primary-color); color: white; border: none; border-radius: 0 4px 4px 0; cursor: pointer;">订阅</button>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 元贞利亨咨询有限公司 版权所有 | 京ICP备XXXXXXXX号</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuBtn.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('#navMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileMenuBtn.textContent = '☰';
+            });
+        });
+
+        // Smooth Scroll for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const headerOffset = 80;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }
+            });
+        });
+
+        // Simple form submission feedback (replaces alert for better UX in actual production, 
+        // but kept simple here as requested)
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = form.querySelector('button[type="submit"]');
+            const originalText = btn.textContent;
+            
+            btn.textContent = '发送中...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                btn.textContent = '提交成功';
+                btn.style.backgroundColor = '#48bb78';
+                form.reset();
+                
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.style.backgroundColor = '';
+                    btn.disabled = false;
+                }, 3000);
+            }, 1000);
+        });
+    </script>
+</body>
+                                                                 </html>
